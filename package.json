@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-gustavo-poncell",
+  "version": "1.0.0",
+  "description": "Portfólio interativo de Gustavo Rodrigues Poncell — apresentação comercial",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "qa:shoot": "node qa/shoot.mjs"
+  },
+  "type": "module",
+  "devDependencies": {
+    "playwright": "^1.65.0",
+    "vite": "^6.4.5"
+  },
+  "private": true,
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/doto": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0"
+  }
+}

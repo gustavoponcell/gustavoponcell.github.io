@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gustavo Poncell — Desenvolvimento & Design</title>
+  <meta name="description" content="Portfólio de Gustavo Rodrigues Poncell: sistemas web, painéis administrativos e identidade visual. Apresentação para plataformas de gestão de ONGs e controle de acesso condominial." />
+  <meta name="theme-color" content="#efede7" />
+  <meta property="og:title" content="Gustavo Poncell — Desenvolvimento & Design" />
+  <meta property="og:description" content="Sistemas bem construídos. Interfaces bem desenhadas." />
+  <meta property="og:image" content="https://gustavoponcell.github.io/img/og.png" />
+  <meta property="og:url" content="https://gustavoponcell.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="img/me/portrait-dither-720.webp" />
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#s1">Pular para o conteúdo</a>
+
+  <!-- ============ BARRA SUPERIOR / NAVEGAÇÃO ============ -->
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#s1" aria-label="G.Poncell — voltar ao início">
+      <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2"/><rect x="7" y="7" width="10" height="10" fill="currentColor"/></svg>
+      <span>G.PONCELL</span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <ol>
+        <li><a href="#s1" data-nav="s1"><b>01</b>Abertura</a></li>
+        <li><a href="#s2" data-nav="s2"><b>02</b>Perfil</a></li>
+        <li><a href="#s3" data-nav="s3"><b>03</b>Sistemas</a></li>
+        <li><a href="#s4" data-nav="s4"><b>04</b>Design</a></li>
+        <li><a href="#s5" data-nav="s5"><b>05</b>Stack</a></li>
+        <li><a href="#s6" data-nav="s6"><b>06</b>Proposta</a></li>
+        <li><a href="#s7" data-nav="s7"><b>07</b>Contato</a></li>
+      </ol>
+    </nav>
+    <div class="topbar__right">
+      <span class="counter mono" aria-live="polite"><span id="counter-now">01</span>/07</span>
+      <button class="iconbtn" id="help-btn" type="button" aria-label="Atalhos de teclado" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 10h1M10 10h1M14 10h1M18 10h0M7 14h10" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+      <a class="btn btn--sm" href="#s7"><span class="btn__ico" aria-hidden="true">→</span><span class="btn__txt">Conversar</span></a>
+    </div>
+    <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 01 — ABERTURA ============ -->
+    <section class="section hero" id="s1" data-stop aria-label="Abertura">
+      <div class="wrap">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow reveal"><span class="sq"></span>Portfólio · Apresentação comercial · Nov 2026</p>
+            <h1 class="hero__name reveal" aria-label="Gustavo Rodrigues Poncell">
+              <span class="line"><span>Gustavo</span></span>
+              <span class="line line--thin"><span>Rodrigues</span></span>
+              <span class="line"><span>Poncell<i class="dot" aria-hidden="true">.</i></span></span>
+            </h1>
+            <p class="hero__dots reveal" aria-hidden="true">CÓDIGO + DESIGN</p>
+            <p class="hero__lead reveal">
+              Desenvolvedor web e designer gráfico, estudante de Sistemas de Informação na UFVJM.
+              Construo sistemas de gestão de ponta a ponta — banco de dados, API, painel — e cuido
+              para que sejam tão claros de usar quanto confiáveis por dentro.
+            </p>
+            <div class="hero__cta reveal">
+              <a class="btn" href="#s3"><span class="btn__ico" aria-hidden="true">→</span><span class="btn__txt">Ver sistemas</span></a>
+              <a class="btn btn--ghost" href="#s6"><span class="btn__txt">Ir para a proposta</span></a>
+            </div>
+          </div>
+
+          <figure class="portrait reveal" id="portrait">
+            <figcaption class="panel__bar"><span>RETRATO.DITHER</span><span>1-BIT → 8-BIT</span></figcaption>
+            <div class="portrait__img">
+              <img class="portrait__dither" src="img/me/portrait-dither-720.webp" alt="" width="720" height="900" />
+              <img class="portrait__photo" src="img/me/portrait-720.webp" srcset="img/me/portrait-720.webp 720w, /img/me/portrait.webp 1260w" sizes="(max-width: 980px) 440px, 36vw" alt="Retrato em preto e branco de Gustavo Poncell, sorrindo" width="1260" height="1575" />
+              <span class="portrait__scan" aria-hidden="true"></span>
+            </div>
+            <div class="panel__bar panel__bar--foot"><span>DIAMANTINA / MG</span><span id="clock">--:--:--</span></div>
+          </figure>
+        </div>
+
+        <!-- Diagrama: do dado à identidade -->
+        <div class="flow reveal" aria-label="Do banco de dados à identidade visual">
+          <div class="flow__col">
+            <span class="node">Banco de dados</span>
+            <span class="node">API &amp; regras</span>
+            <span class="node">Acesso &amp; perfis</span>
+          </div>
+          <svg class="flow__lines" viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 20 L260 80"/><path d="M0 80 L260 80"/><path d="M0 140 L260 80"/>
+            <path d="M340 80 L600 20"/><path d="M340 80 L600 80"/><path d="M340 80 L600 140"/>
+          </svg>
+          <div class="flow__dots" aria-hidden="true">
+            <i style="--x0:0%;--y0:12.5%;--x1:43.3%;--y1:50%;--t:2.6s;--d:0s"></i>
+            <i style="--x0:0%;--y0:50%;--x1:43.3%;--y1:50%;--t:3.1s;--d:.6s"></i>
+            <i style="--x0:0%;--y0:87.5%;--x1:43.3%;--y1:50%;--t:2.8s;--d:1.1s"></i>
+            <i style="--x0:56.7%;--y0:50%;--x1:100%;--y1:12.5%;--t:2.7s;--d:.3s"></i>
+            <i style="--x0:56.7%;--y0:50%;--x1:100%;--y1:50%;--t:3.2s;--d:.9s"></i>
+            <i style="--x0:56.7%;--y0:50%;--x1:100%;--y1:87.5%;--t:2.5s;--d:1.4s"></i>
+          </div>
+          <div class="flow__core" aria-hidden="true"><span>✳</span></div>
+          <div class="flow__col flow__col--r">
+            <span class="node">Dashboard</span>
+            <span class="node">Interface</span>
+            <span class="node">Identidade visual</span>
+          </div>
+        </div>
+        <p class="flow__caption reveal">Sistemas bem construídos. <em>Interfaces bem desenhadas.</em></p>
+
+        <dl class="facts reveal">
+          <div><dt>Base</dt><dd>Diamantina / MG</dd></div>
+          <div><dt>Formação</dt><dd>Sistemas de Informação — UFVJM</dd></div>
+          <div><dt>Atuação</dt><dd>Desenvolvimento web + design</dd></div>
+          <div><dt>Clientes</dt><dd>2 imobiliárias — site + painel de gestão</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ 02 — QUEM SOU ============ -->
+    <section class="section" id="s2" data-stop aria-labelledby="s2-title">
+      <div class="wrap">
+        <div class="sechead reveal"><span class="scramble">// SEÇÃO: PERFIL</span><span class="sechead__rule"></span><span>002</span></div>
+        <div class="split">
+          <div class="term reveal" aria-label="Resumo do perfil">
+            <div class="panel__bar panel__bar--dark"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span>PERFIL.SYS</span></div>
+            <pre class="term__body" id="terminal" data-lines='[
+"> carregando perfil...",
+"> nome ........ Gustavo Rodrigues Poncell",
+"> formação .... Sistemas de Informação · UFVJM",
+"> design ...... Nexter (2023) · Dicom/UFVJM (2024+)",
+"> sistemas .... painéis, APIs, bancos de dados",
+"> clientes .... imobiliárias em Diamantina/MG",
+"> método ...... especificar → prototipar → construir → testar",
+"> status ...... disponível para novos projetos"
+]'></pre>
+            <div class="tl">
+              <div class="panel__bar"><span>TRAJETÓRIA.LOG</span><span>2023 → 2026</span></div>
+              <ol class="timeline">
+                <li><b>2023</b><span>Nexter — agência de marketing, clientes de segmentos variados. Primeira experiência profissional.</span></li>
+                <li><b>2024</b><span>Dicom / UFVJM — estágio de 2 anos: criação estratégica, organização de processos, prazos e planejamento.</span></li>
+                <li><b>2024</b><span>O Quarto Rec — 3 meses no planejamento de postagens das redes do Kevin O Chris (via K2L).</span></li>
+                <li><b>2025</b><span>Sistemas acadêmicos em Java e Python: gestão de oficina, barbearia, IA e otimização de rotas.</span></li>
+                <li><b>2026</b><span>Sistemas web para clientes reais: plataformas imobiliárias com painel de gestão.</span></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="manifest reveal">
+            <div class="panel__bar"><span>MANIFESTO.MD</span><span>v2026.11</span></div>
+            <div class="manifest__body">
+              <h2 id="s2-title" class="h2">Engenharia de sistemas <span class="accent">com olhar de designer.</span></h2>
+              <p>Sou de Montes Claros, criado em Brasília de Minas, e hoje vivo em Diamantina, onde curso Sistemas de Informação na UFVJM. Grande parte do que aprendi veio da vontade de construir coisas: primeiro nasce a ideia, depois vou atrás das habilidades para tirá-la do papel.</p>
+              <p>O design veio antes da programação — em agência de marketing e em dois anos de estágio na comunicação da UFVJM. Hoje uso essa bagagem para desenhar sistemas que as pessoas entendem na primeira vez que abrem: hierarquia clara, fluxos curtos, dados que fazem sentido.</p>
+              <dl class="triad">
+                <div><dt>Software</dt><dd>Regras de negócio no servidor, dados consistentes, acesso controlado por perfil e histórico do que muda.</dd></div>
+                <div><dt>Experiência</dt><dd>Fluxos curtos, linguagem da equipe que vai usar e telas testadas no celular, no tablet e no desktop.</dd></div>
+                <div><dt>Identidade</dt><dd>Interfaces com personalidade e coerentes com a marca — o sistema também comunica quem é a organização.</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div class="method reveal" aria-label="Método de trabalho">
+          <article><b>01</b><h3>Entender</h3><p>Regras de negócio escritas, critérios de aceite claros e o que <em>não</em> entra no escopo.</p></article>
+          <article><b>02</b><h3>Prototipar</h3><p>Protótipo navegável validado antes do backend — o painel da Ana Cleide foi aprovado sem ajustes.</p></article>
+          <article><b>03</b><h3>Construir</h3><p>Entregas pequenas e revisadas. Ferramentas de IA aceleram, mas todo código passa por revisão.</p></article>
+          <article><b>04</b><h3>Verificar</h3><p>Testes automatizados, verificação visual no celular, tablet e desktop, e backup antes de ir ao ar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 — SISTEMAS ============ -->
+    <section class="section" id="s3" aria-labelledby="s3-title">
+      <div class="wrap">
+        <div class="sechead reveal" data-stop><span class="scramble">// SEÇÃO: SISTEMAS</span><span class="sechead__rule"></span><span>003</span></div>
+        <div class="intro reveal">
+          <h2 id="s3-title" class="h2 h2--xl">Sistemas de gestão,<br/>construídos de ponta a ponta.</h2>
+          <p class="intro__aside">Três projetos com painel administrativo, autenticação e banco de dados — o mesmo tipo de base que as duas plataformas pedem. Status reais, sem retoque.</p>
+        </div>
+        <div id="dev-projects"></div>
+
+        <div class="archive reveal" data-stop>
+          <div class="panel__bar"><span>ARQUIVO.REPOS</span><span>github.com/gustavoponcell</span></div>
+          <table>
+            <thead><tr><th scope="col">Projeto</th><th scope="col">O que faz</th><th scope="col">Stack</th><th scope="col">Status</th></tr></thead>
+            <tbody id="archive-rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 — DESIGN ============ -->
+    <section class="section section--ink" id="s4" aria-labelledby="s4-title">
+      <div class="wrap">
+        <div class="sechead sechead--ink reveal" data-stop><span class="scramble">// SEÇÃO: DESIGN</span><span class="sechead__rule"></span><span>004</span></div>
+        <div class="intro reveal">
+          <h2 id="s4-title" class="h2 h2--xl">Direção de arte<br/>que vira produto.</h2>
+          <p class="intro__aside">Identidades completas publicadas no Behance. É daqui que vem o cuidado com hierarquia, consistência e narrativa que levo para cada tela de sistema.</p>
+        </div>
+        <div id="design-projects"></div>
+
+        <div class="why reveal">
+          <h3 class="why__title">Por que isso importa num sistema de gestão</h3>
+          <div class="why__grid">
+            <article><b>Hierarquia</b><p>Um painel é uma peça gráfica com dados: o que é urgente precisa saltar aos olhos antes do resto.</p></article>
+            <article><b>Sistema</b><p>Manual de marca e design system são o mesmo raciocínio — regras que mantêm 50 telas coerentes.</p></article>
+            <article><b>Adoção</b><p>Software que parece confiável e é fácil de entender é usado de verdade pela equipe e pelo público.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 — COMPETÊNCIAS ============ -->
+    <section class="section" id="s5" data-stop aria-labelledby="s5-title">
+      <div class="wrap">
+        <div class="sechead reveal"><span class="scramble">// SEÇÃO: STACK</span><span class="sechead__rule"></span><span>005</span></div>
+        <div class="skills">
+          <div class="metrics reveal">
+            <div class="panel__bar"><span>EVIDÊNCIAS</span><span class="live-dot" aria-hidden="true"></span></div>
+            <div class="metrics__list">
+              <div><strong data-count="3">3</strong><span>sistemas com painel administrativo</span></div>
+              <div><strong data-count="2">2</strong><span>clientes reais atendidos</span></div>
+              <div><strong data-count="3">3</strong><span>identidades visuais publicadas</span></div>
+              <div><strong data-count="130" data-suffix=" mil">130 mil</strong><span>contas alcançadas numa campanha</span></div>
+            </div>
+          </div>
+          <div class="matrix reveal">
+            <div class="panel__bar"><span>COMPETÊNCIAS.TABLE</span><span>só o que tem prova</span></div>
+            <h2 id="s5-title" class="sr-only">Competências e tecnologias</h2>
+            <table>
+              <thead><tr><th scope="col">Área</th><th scope="col">Tecnologias e práticas</th><th scope="col">Onde está comprovado</th></tr></thead>
+              <tbody id="skill-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 — PROPOSTA PARA O CLIENTE ============ -->
+    <section class="section" id="s6" aria-labelledby="s6-title">
+      <div class="wrap">
+        <div class="sechead reveal" data-stop><span class="scramble">// SEÇÃO: PROPOSTA</span><span class="sechead__rule"></span><span>006</span></div>
+        <div class="intro reveal">
+          <h2 id="s6-title" class="h2 h2--xl">Duas plataformas.<br/><span class="accent">Um mesmo cuidado.</span></h2>
+          <p class="intro__aside">Como a experiência acima se traduz nos sistemas que vocês querem construir. Uma leitura inicial para conversarmos — não um escopo fechado.</p>
+        </div>
+
+        <p class="disclaimer reveal" role="note"><b>PROPOSTA VISUAL ILUSTRATIVA</b> Os mockups abaixo são conceitos para discussão, com dados fictícios. Não são sistemas já desenvolvidos e não definem escopo, prazo ou orçamento.</p>
+
+        <div class="tabs reveal" role="tablist" aria-label="Plataformas">
+          <button role="tab" id="tab-a" aria-controls="panel-a" aria-selected="true" class="tab"><b>A</b>Gestão de ONGs</button>
+          <button role="tab" id="tab-b" aria-controls="panel-b" aria-selected="false" class="tab" tabindex="-1"><b>B</b>Controle de acesso · condomínio</button>
+        </div>
+
+        <!-- ---------- A: ONG ---------- -->
+        <div class="concept" id="panel-a" role="tabpanel" aria-labelledby="tab-a" data-stop>
+          <div class="concept__head">
+            <h3 class="h3">Plataforma de gestão para ONGs</h3>
+            <p>Um só lugar para projetos sociais, pessoas e dinheiro — com transparência suficiente para prestar contas a doadores e conselhos.</p>
+          </div>
+          <div class="mock" aria-label="Mockup ilustrativo do painel da ONG">
+            <div class="mock__bar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span>CONCEITO.A — painel da organização</span><span class="tag">ILUSTRATIVO</span></div>
+            <div class="mock__app">
+              <aside class="mock__side" aria-hidden="true">
+                <b>◼ Instituto</b>
+                <span class="on">Visão geral</span><span>Projetos</span><span>Voluntários</span><span>Beneficiários</span><span>Doações</span><span>Relatórios</span>
+              </aside>
+              <div class="mock__main">
+                <div class="mock__title"><strong>Visão geral</strong><span>Período: este mês · dados fictícios</span></div>
+                <div class="kpis">
+                  <div><span>Doações no mês</span><strong>R$ 48,2 mil</strong><em>+12% vs. mês anterior</em></div>
+                  <div><span>Projetos ativos</span><strong>7</strong><em>2 com meta em risco</em></div>
+                  <div><span>Voluntários na escala</span><strong>64</strong><em>11 hoje</em></div>
+                  <div class="hot"><span>Prestação de contas</span><strong>3</strong><em>relatórios pendentes</em></div>
+                </div>
+                <div class="mock__row">
+                  <div class="card">
+                    <div class="card__t">Arrecadação por mês</div>
+                    <div class="bars" aria-hidden="true"><i style="--h:42%"></i><i style="--h:55%"></i><i style="--h:38%"></i><i style="--h:61%"></i><i style="--h:57%"></i><i style="--h:70%"></i><i style="--h:66%"></i><i style="--h:82%"></i><i style="--h:74%"></i><i style="--h:90%" class="now"></i></div>
+                  </div>
+                  <div class="card">
+                    <div class="card__t">Metas dos projetos</div>
+                    <ul class="goals">
+                      <li><span>Reforço escolar</span><i style="--w:78%"></i><b>78%</b></li>
+                      <li><span>Horta comunitária</span><i style="--w:52%"></i><b>52%</b></li>
+                      <li><span>Cesta básica</span><i style="--w:91%"></i><b>91%</b></li>
+                      <li class="risk"><span>Oficina de música</span><i style="--w:23%"></i><b>23%</b></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modules">
+            <article><h4>Projetos sociais</h4><p>Metas, cronograma, equipe e orçamento por projeto, com indicadores de impacto.</p><small>↳ base: dashboard por período e funil — Ana Cleide</small></article>
+            <article><h4>Voluntários</h4><p>Cadastro, disponibilidade, escalas e histórico de participação.</p><small>↳ base: agenda e horários — ClinicAgenda</small></article>
+            <article><h4>Beneficiários</h4><p>Ficha de atendimento com dados sensíveis protegidos e acesso por perfil (LGPD).</p><small>↳ base: perfis e permissões — ClinicAgenda · CPF em hash — Barbearia</small></article>
+            <article><h4>Doações &amp; finanças</h4><p>Entradas por doador e campanha, despesas por projeto e comprovantes anexados.</p><small>↳ base: financeiro com gráficos — RentalManager</small></article>
+            <article><h4>Relatórios</h4><p>Prestação de contas por período e por projeto, pronta para conselho e doadores.</p><small>↳ base: relatórios por período — ClinicAgenda</small></article>
+            <article><h4>Trilha de auditoria</h4><p>Quem alterou o quê e quando — essencial para a transparência da organização.</p><small>↳ base: AuditLog — ClinicAgenda</small></article>
+          </div>
+        </div>
+
+        <!-- ---------- B: CONDOMÍNIO ---------- -->
+        <div class="concept" id="panel-b" role="tabpanel" aria-labelledby="tab-b" hidden data-stop>
+          <div class="concept__head">
+            <h3 class="h3">Controle de acesso para condomínio fechado</h3>
+            <p>A portaria sabe quem pode entrar antes de a pessoa chegar; o morador autoriza do celular; o síndico enxerga tudo com histórico confiável.</p>
+          </div>
+          <div class="mock mock--dark" aria-label="Mockup ilustrativo da tela da portaria">
+            <div class="mock__bar"><span class="lights" aria-hidden="true"><i></i><i></i><i></i></span><span>CONCEITO.B — portaria · turno noite</span><span class="tag">ILUSTRATIVO</span></div>
+            <div class="gate">
+              <div class="gate__log">
+                <div class="gate__search"><span>⌕</span> Buscar por nome, unidade ou placa</div>
+                <table>
+                  <thead><tr><th>Hora</th><th>Pessoa / veículo</th><th>Tipo</th><th>Unid.</th><th>Status</th></tr></thead>
+                  <tbody>
+                    <tr><td>21:42</td><td>Carla M.</td><td>Visitante</td><td>B-302</td><td><span class="st st--ok">Liberado</span></td></tr>
+                    <tr><td>21:37</td><td>QRT-4F21</td><td>Veículo</td><td>A-104</td><td><span class="st st--ok">Liberado</span></td></tr>
+                    <tr class="flash"><td>21:35</td><td>Entrega · App</td><td>Prestador</td><td>C-210</td><td><span class="st st--wait">Aguardando</span></td></tr>
+                    <tr><td>21:12</td><td>Rafael T.</td><td>Morador</td><td>A-001</td><td><span class="st st--ok">Liberado</span></td></tr>
+                    <tr><td>20:58</td><td>Sem cadastro</td><td>Visitante</td><td>—</td><td><span class="st st--no">Negado</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="gate__side">
+                <div class="pass">
+                  <span class="pass__k">PRÉ-AUTORIZADO</span>
+                  <strong class="pass__code">4821</strong>
+                  <span>Visitante: Júlio S.</span>
+                  <span>Autorizado por: B-302</span>
+                  <span>Válido até 23:00 · uso único</span>
+                </div>
+                <div class="gate__stats">
+                  <div><b>38</b><span>entradas hoje</span></div>
+                  <div><b>4</b><span>visitantes no condomínio</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modules">
+            <article><h4>Moradores &amp; unidades</h4><p>Cadastro por unidade, dependentes, veículos e contatos de emergência.</p><small>↳ base: cadastros relacionados — Ana Cleide</small></article>
+            <article><h4>Visitantes</h4><p>Pré-autorização pelo morador, com código de uso único e validade definida.</p><small>↳ base: regras validadas no servidor — ClinicAgenda</small></article>
+            <article><h4>Prestadores</h4><p>Janelas de horário recorrentes e aprovação do síndico para serviços frequentes.</p><small>↳ base: horários e bloqueios — ClinicAgenda</small></article>
+            <article><h4>Entradas &amp; saídas</h4><p>Registro com hora, operador e unidade — histórico que não se apaga.</p><small>↳ base: AuditLog e exclusão lógica — ClinicAgenda</small></article>
+            <article><h4>Perfis de acesso</h4><p>Síndico, portaria, administração e morador, cada um vendo apenas o que precisa.</p><small>↳ base: JWT + perfis — ClinicAgenda · Access — Adriano Azevedo</small></article>
+            <article><h4>Relatórios</h4><p>Movimentação por período, unidade e tipo, com exportação para a administração.</p><small>↳ base: relatórios e dashboards — ClinicAgenda, Ana Cleide</small></article>
+          </div>
+          <figure class="arch" aria-label="Arquitetura conceitual">
+            <figcaption class="panel__bar"><span>ARQUITETURA.CONCEITUAL</span><span>ILUSTRATIVO</span></figcaption>
+            <svg viewBox="0 0 960 250" role="img" aria-label="Morador, portaria e síndico acessam uma API única, que grava no banco e em um registro de acessos imutável e dispara notificações.">
+              <g class="arch__boxes">
+                <rect x="20" y="20" width="200" height="54"/><text x="120" y="52">Morador · celular</text>
+                <rect x="20" y="98" width="200" height="54"/><text x="120" y="130">Portaria · tablet</text>
+                <rect x="20" y="176" width="200" height="54"/><text x="120" y="208">Síndico · painel</text>
+                <rect x="370" y="80" width="220" height="90" class="core"/><text x="480" y="118" class="strong">API</text><text x="480" y="142" class="small">autenticação · perfis · regras</text>
+                <rect x="740" y="20" width="200" height="54"/><text x="840" y="52">Banco de dados</text>
+                <rect x="740" y="98" width="200" height="54"/><text x="840" y="130">Registro de acessos</text>
+                <rect x="740" y="176" width="200" height="54"/><text x="840" y="208">Notificações</text>
+              </g>
+              <g class="arch__lines">
+                <path d="M220 47 L370 110"/><path d="M220 125 L370 125"/><path d="M220 203 L370 140"/>
+                <path d="M590 110 L740 47"/><path d="M590 125 L740 125"/><path d="M590 140 L740 203"/>
+              </g>
+            </svg>
+          </figure>
+        </div>
+
+        <div class="steps reveal" data-stop>
+          <h3 class="h3">Como eu conduziria</h3>
+          <ol>
+            <li><b>01</b><h4>Descoberta</h4><p>Conversas com quem vai usar: coordenação da ONG, síndico, portaria, moradores.</p></li>
+            <li><b>02</b><h4>Especificação</h4><p>Regras de negócio, perfis de acesso e critérios de aceite por escrito.</p></li>
+            <li><b>03</b><h4>Protótipo</h4><p>Telas navegáveis para validar o fluxo antes de qualquer código de backend.</p></li>
+            <li><b>04</b><h4>Construção</h4><p>Entregas incrementais, cada uma testada e demonstrável.</p></li>
+            <li><b>05</b><h4>Implantação</h4><p>Publicação, backup, treinamento da equipe e acompanhamento inicial.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 — CONTATO ============ -->
+    <section class="section section--ink contact" id="s7" data-stop aria-labelledby="s7-title">
+      <div class="wrap">
+        <div class="sechead sechead--ink reveal"><span class="scramble">// SEÇÃO: CONTATO</span><span class="sechead__rule"></span><span>007</span></div>
+        <p class="contact__dots reveal" aria-hidden="true">VAMOS CONVERSAR</p>
+        <h2 id="s7-title" class="contact__title reveal">Da necessidade do negócio ao sistema funcionando.</h2>
+        <p class="contact__sub reveal">Código, experiência e identidade sob a mesma responsabilidade. Adoraria entender melhor a rotina da ONG e do condomínio para desenhar, juntos, o primeiro passo.</p>
+        <div class="contact__grid reveal">
+          <a class="clink clink--main" id="c-whats" href="#" target="_blank" rel="noopener"><span>WhatsApp</span><strong id="c-whats-txt"></strong><i aria-hidden="true">↗</i></a>
+          <a class="clink" id="c-mail" href="#"><span>E-mail</span><strong id="c-mail-txt"></strong><i aria-hidden="true">↗</i></a>
+          <a class="clink" id="c-gh" href="#" target="_blank" rel="noopener"><span>GitHub</span><strong>gustavoponcell</strong><i aria-hidden="true">↗</i></a>
+          <a class="clink" id="c-be" href="#" target="_blank" rel="noopener"><span>Behance</span><strong>gustavoponcell</strong><i aria-hidden="true">↗</i></a>
+          <a class="clink" id="c-ig" href="#" target="_blank" rel="noopener"><span>Instagram</span><strong>@poncell.webp</strong><i aria-hidden="true">↗</i></a>
+        </div>
+        <footer class="foot">
+          <span>© 2026 Gustavo Rodrigues Poncell</span>
+          <span>Fontes: GitHub, Behance e currículo · telas reais dos projetos</span>
+          <span>Feito à mão: HTML, CSS e JavaScript</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- HUD de apresentação -->
+  <div class="hud" aria-label="Navegação da apresentação">
+    <button type="button" class="hud__btn" id="prev" aria-label="Anterior">↑</button>
+    <span class="hud__label mono" id="hud-label">Abertura</span>
+    <button type="button" class="hud__btn" id="next" aria-label="Próximo">↓</button>
+  </div>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Visualização ampliada">
+    <div class="lightbox__bar"><span id="lb-caption"></span><span id="lb-count" class="mono"></span><button type="button" class="iconbtn iconbtn--light" id="lb-close" aria-label="Fechar">✕</button></div>
+    <div class="lightbox__stage"><button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Imagem anterior">←</button><div class="lightbox__img"><img id="lb-img" alt="" /></div><button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Próxima imagem">→</button></div>
+  </dialog>
+
+  <!-- Atalhos -->
+  <dialog class="help" id="help" aria-labelledby="help-title">
+    <div class="panel__bar"><span id="help-title">ATALHOS.KEYS</span><button type="button" class="iconbtn" id="help-close" aria-label="Fechar">✕</button></div>
+    <dl>
+      <div><dt><kbd>↓</kbd> <kbd>→</kbd> <kbd>Espaço</kbd> <kbd>PgDn</kbd></dt><dd>Próximo ponto da apresentação</dd></div>
+      <div><dt><kbd>↑</kbd> <kbd>←</kbd> <kbd>PgUp</kbd></dt><dd>Ponto anterior</dd></div>
+      <div><dt><kbd>1</kbd>–<kbd>7</kbd></dt><dd>Ir direto para a seção</dd></div>
+      <div><dt><kbd>Home</kbd> <kbd>End</kbd></dt><dd>Início / contato</dd></div>
+      <div><dt><kbd>F</kbd></dt><dd>Tela cheia</dd></div>
+      <div><dt><kbd>Esc</kbd></dt><dd>Fechar imagem ou painel</dd></div>
+    </dl>
+  </dialog>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

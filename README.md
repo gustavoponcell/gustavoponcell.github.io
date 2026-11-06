@@ -2,7 +2,7 @@
 
 Apresentação comercial navegável para a reunião sobre duas plataformas: **gestão de ONGs** e **controle de acesso para condomínio fechado**.
 
-**Site:** https://gustavoponcell.github.io/
+**Site:** https://gustavoponcell.github.io/ · **Repositório:** https://github.com/gustavoponcell/gustavoponcell.github.io
 
 ---
 

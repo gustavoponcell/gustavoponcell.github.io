@@ -188,9 +188,11 @@ button { font: inherit; color: inherit; }
 .flow__col { display: flex; flex-direction: column; gap: 22px; z-index: 1; }
 .flow__col--r { align-items: flex-end; }
 .node { display: inline-block; padding: 7px 16px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--paper); font: 500 12px/1 var(--f-mono); letter-spacing: .04em; white-space: nowrap; }
-.flow__lines { position: absolute; left: 150px; right: 150px; top: 0; bottom: 0; width: calc(100% - 300px); height: 100%; overflow: visible; }
+.flow { --nw: 172px; }
+.flow__col .node { width: var(--nw); text-align: center; }
+.flow__lines { position: absolute; left: var(--nw); right: var(--nw); top: 0; bottom: 0; width: calc(100% - 2 * var(--nw)); height: 100%; overflow: visible; }
 .flow__lines path { fill: none; stroke: rgba(13,13,12,.3); stroke-width: 1; vector-effect: non-scaling-stroke; }
-.flow__dots { position: absolute; left: 150px; right: 150px; top: 0; bottom: 0; pointer-events: none; }
+.flow__dots { position: absolute; left: var(--nw); right: var(--nw); top: 0; bottom: 0; pointer-events: none; overflow: hidden; }
 .flow__dots i { position: absolute; inset: 0; animation: travel var(--t) linear var(--d) infinite both; will-change: transform; }
 .flow__dots i::before { content: ''; position: absolute; left: -3.5px; top: -3.5px; width: 7px; height: 7px; border-radius: 50%; background: var(--signal); }
 @keyframes travel { from { transform: translate(var(--x0), var(--y0)); } to { transform: translate(var(--x1), var(--y1)); } }
@@ -607,8 +609,7 @@ kbd { display: inline-block; min-width: 26px; padding: 4px 6px; border: 1.5px so
   .clink { border-right: 1px solid rgba(239,237,231,.2) !important; border-bottom: 1px solid rgba(239,237,231,.2) !important; }
   .clink:nth-child(odd):not(.clink--main) { border-right: 0 !important; }
   .clink:last-child { border-bottom: 0 !important; }
-  .flow__lines { left: 130px; right: 130px; width: calc(100% - 260px); }
-  .flow__dots { left: 130px; right: 130px; }
+  .flow { --nw: 160px; }
 }
 @media (max-width: 980px) {
   .archive table, .archive thead, .archive tbody, .archive tr, .archive td { display: block; }
@@ -623,6 +624,7 @@ kbd { display: inline-block; min-width: 26px; padding: 4px 6px; border: 1.5px so
   .counter { display: none; }
   .hero__name { font-size: clamp(46px, 16.5vw, 96px); }
   .flow { grid-template-columns: minmax(0, 1fr); gap: 16px; justify-items: center; }
+  .flow__col .node { width: auto; }
   .flow__col, .flow__col--r { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; }
   .flow__lines, .flow__dots { display: none; }
   .flow__core { width: 56px; height: 56px; }
